@@ -24,6 +24,10 @@ def configure_logging(env: str = "staging") -> logging.Logger:
     Returns:
     logging.Logger: El logger configurado para el entorno especificado.
     """
+
+    log_dir = "logs"
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
     with open("config/logging.yaml", "rt") as f:
         config = yaml.safe_load(f.read())
     logging.config.dictConfig(config)
