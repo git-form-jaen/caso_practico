@@ -123,9 +123,6 @@ def process_dataframe_mineco(df: pd.DataFrame) -> pd.DataFrame:
 
     df = rename_columns(df, replacements)
 
-    # A continuación, se usa chaining o encadenamiento de métodos para aplicar múltiples transformaciones al DataFrame de Pandas de manera secuencial y concisa.
-    # Esto puede mejorar la legibilidad y la mantenibilidad del código. Justo debajo, se deja el código equivalente sin usar chaining en Pandas para que puedas comparar.
-
     # 1. Se convierte la columna "valor" a numérico (pd.to_numeric):
     #    - Convierte los valores a string.
     #    - Reemplaza comas por puntos (para manejar decimales en formato europeo).
